@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffcccb">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_view_seller"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="8dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="16dp"
+        android:padding="8dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#e8ebf4">
+
+            <ProgressBar
+                android:id="@+id/progress_bar_view_seller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp" />
+
+            <ImageView
+                android:id="@+id/image_view_seller"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="4dp"
+                android:padding="4dp"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/rl_view_seller"
+        app:cardCornerRadius="8dp"
+        android:layout_margin="8dp"
+        android:padding="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#e6ebf4">
+
+            <TextView
+                android:id="@+id/text_view_seller_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:padding="8dp"
+                android:text="MESS NAME"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Widget.Button"/>
+
+            <TextView
+                android:id="@+id/text_view_seller_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_view_seller_name"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:padding="8dp"
+                android:text="MESS ADDRESS"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Widget.Button"/>
+
+            <TextView
+                android:id="@+id/text_view_seller_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_view_seller_address"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:padding="8dp"
+                android:text="MESS PRICE"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Widget.Button"/>
+
+            <TextView
+                android:id="@+id/text_view_seller_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_view_seller_price"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:padding="8dp"
+                android:text="MESS CONTACT"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Widget.Button"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

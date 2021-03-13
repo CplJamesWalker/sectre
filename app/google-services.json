@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "374185854584",
+    "firebase_url": "https://charlie-95a20-default-rtdb.firebaseio.com",
+    "project_id": "charlie-95a20",
+    "storage_bucket": "charlie-95a20.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:374185854584:android:5ecfcff5b01f8e8bc94f8d",
+        "android_client_info": {
+          "package_name": "android.bignerdranch.charlie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "374185854584-t5k4g9h9i07hplcg7t2qk8hd0joobrra.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOJgOq5cHNYhk47IBLCJoNcPO9s2wy7I4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "374185854584-t5k4g9h9i07hplcg7t2qk8hd0joobrra.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:374185854584:android:4fe76724e49726dbc94f8d",
+        "android_client_info": {
+          "package_name": "com.cyrus.dabbawala"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "374185854584-t5k4g9h9i07hplcg7t2qk8hd0joobrra.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOJgOq5cHNYhk47IBLCJoNcPO9s2wy7I4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "374185854584-t5k4g9h9i07hplcg7t2qk8hd0joobrra.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:374185854584:android:83fa15ca0fae4b2ac94f8d",
+        "android_client_info": {
+          "package_name": "com.example.tango"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "374185854584-t5k4g9h9i07hplcg7t2qk8hd0joobrra.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOJgOq5cHNYhk47IBLCJoNcPO9s2wy7I4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "374185854584-t5k4g9h9i07hplcg7t2qk8hd0joobrra.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

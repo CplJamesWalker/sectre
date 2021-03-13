@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="500dp"
+        android:layout_height="750dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/image_button_capture"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_name"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="fitXY"/>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/activity_seller_cv1"
+                android:layout_below="@id/image_button_capture"
+                android:layout_margin="16dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edit_text_name"
+                    android:layout_margin="4dp"
+                    android:hint="Enter Name"
+                    android:textSize="20dp"
+                    android:textColorHint="#ffc0cb"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/activity_seller_cv2"
+                android:layout_below="@id/activity_seller_cv1"
+                android:layout_margin="16dp">
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edit_text_address"
+                    android:layout_margin="4dp"
+                    android:hint="Enter Address"
+                    android:textSize="20dp"
+                    android:textColorHint="#ffc0cb"/>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/activity_seller_cv3"
+                android:layout_below="@id/activity_seller_cv2"
+                android:layout_margin="16dp">
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edit_text_contact"
+                    android:layout_margin="4dp"
+                    android:hint="Enter Contact"
+                    android:textSize="20dp"
+                    android:maxLength="10"
+                    android:inputType="number"
+                    android:textColorHint="#ffc0cb"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/activity_seller_cv4"
+                android:layout_below="@id/activity_seller_cv3"
+                android:layout_margin="16dp">
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edit_text_price"
+                    android:layout_margin="4dp"
+                    android:hint="Enter Price"
+                    android:textSize="20dp"
+                    android:inputType="number"
+                    android:textColorHint="#ffc0cb"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_locate"
+                android:text="LOCATE"
+                android:layout_below="@id/activity_seller_cv4"
+                android:layout_margin="8dp"
+                android:padding="8dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_add"
+                android:text="ADD"
+                android:layout_below="@id/button_locate"
+                android:layout_margin="8dp"
+                android:padding="8dp"/>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

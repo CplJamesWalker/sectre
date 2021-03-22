@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
+
 public class ViewSellerActivity extends AppCompatActivity {
 
     private static final String EXTRA_SELLER_ID = "com.android.charlie.seller_id";
@@ -17,7 +19,6 @@ public class ViewSellerActivity extends AppCompatActivity {
     private TextView mSellerPriceTextView;
     private TextView mSellerContactView;
     private ImageView mSellerImageVIew;
-    private ProgressBar mSellerProgressBar;
     private String seller_id;
 
     public static Intent newIntent(Context packageContext, String id)
@@ -39,13 +40,12 @@ public class ViewSellerActivity extends AppCompatActivity {
         mSellerPriceTextView = (TextView) findViewById(R.id.text_view_seller_price);
         mSellerContactView = (TextView) findViewById(R.id.text_view_seller_contact);
         mSellerImageVIew = (ImageView) findViewById(R.id.image_view_seller);
-        mSellerProgressBar = (ProgressBar) findViewById(R.id.progress_bar_view_seller);
 
         mSellerNameTextView.setText(SellerLab.getMrSeller(seller_id).getName());
         mSellerAddressTextView.setText(SellerLab.getMrSeller(seller_id).getAddress());
         mSellerPriceTextView.setText(SellerLab.getMrSeller(seller_id).getPrice());
         mSellerContactView.setText(SellerLab.getMrSeller(seller_id).getContact());
-        new BuyerActivity.DownLoadImageTask(mSellerImageVIew,mSellerProgressBar).execute(SellerLab.getMrSeller(seller_id).getImage());
+        Glide.with(ViewSellerActivity.this).load(SellerLab.getMrSeller(seller_id).getImage()).into(mSellerImageVIew);
     }
 
 }

@@ -25,6 +25,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -56,42 +57,6 @@ public class BuyerActivity extends AppCompatActivity {
         return intent;
     }
 
-    public static class DownLoadImageTask extends AsyncTask<String, Void, Bitmap> {
-        ImageView imageView;
-        ProgressBar progressBar;
-
-        public DownLoadImageTask(ImageView imageView, ProgressBar progressBar){
-            this.imageView = imageView;
-            this.progressBar = progressBar;
-            progressBar.setVisibility(View.VISIBLE);
-        }
-
-
-        protected Bitmap doInBackground(String...urls){
-            String urlOfImage = urls[0];
-            Bitmap logo = null;
-            try{
-                InputStream is = new URL(urlOfImage).openStream();
-                /*
-                    decodeStream(InputStream is)
-                        Decode an input stream into a bitmap.
-                 */
-                logo = BitmapFactory.decodeStream(is);
-            }catch(Exception e){ // Catch the download exception
-                e.printStackTrace();
-            }
-            return logo;
-        }
-
-        /*
-            onPostExecute(Result result)
-                Runs on the UI thread after doInBackground(Params...).
-         */
-        protected void onPostExecute(Bitmap result){
-            imageView.setImageBitmap(result);
-            progressBar.setVisibility(View.GONE);
-        }
-    }
 
     public class SellerHolder extends RecyclerView.ViewHolder {
         private Seller mSeller;
@@ -99,7 +64,6 @@ public class BuyerActivity extends AppCompatActivity {
         private TextView mAddressTextView;
         private TextView mPriceTextView;
         private ImageView mSellerImageView;
-        private ProgressBar mProgressBar;
         public SellerHolder(LayoutInflater inflater, ViewGroup parent) {
             super(inflater.inflate(R.layout.list_item_seller,parent,false));
 
@@ -107,7 +71,6 @@ public class BuyerActivity extends AppCompatActivity {
             mAddressTextView = (TextView) itemView.findViewById(R.id.text_view_address);
             mPriceTextView = (TextView) itemView.findViewById(R.id.text_view_price);
             mSellerImageView = (ImageView) itemView.findViewById(R.id.image_view_browse_seller);
-            mProgressBar = (ProgressBar) itemView.findViewById(R.id.progress_bar_browse_seller);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -125,7 +88,7 @@ public class BuyerActivity extends AppCompatActivity {
             mNameTextView.setText(mSeller.getName());
             mAddressTextView.setText(mSeller.getAddress());
             mPriceTextView.setText(mSeller.getPrice());
-            new DownLoadImageTask(mSellerImageView,mProgressBar).execute(seller.getImage());
+            Glide.with(BuyerActivity.this).load(mSeller.getImage()).into(mSellerImageView);
         }
 
     }
@@ -194,9 +157,9 @@ public class BuyerActivity extends AppCompatActivity {
         mSellerSwipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-               getData();
-                Toast.makeText(BuyerActivity.this, "UPDATED!", Toast.LENGTH_SHORT).show();
+                getData();
                 mSellerSwipeRefresh.setRefreshing(false);
+                Toast.makeText(BuyerActivity.this, "UPDATED!", Toast.LENGTH_SHORT).show();
             }
         });
     }

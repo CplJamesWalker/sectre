@@ -20,13 +20,6 @@
             android:layout_height="wrap_content"
             android:background="#e8ebf4">
 
-            <ProgressBar
-                android:id="@+id/progress_bar_view_seller"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="60dp" />
-
             <ImageView
                 android:id="@+id/image_view_seller"
                 android:layout_width="150dp"
